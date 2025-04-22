@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dublin Art Group</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            background: linear-gradient(180deg, #EAF4F8 0%, #A0C9E3 40%, #00334E 100%);
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            color: #00334E;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header.main-header {
+            position: relative;
+            height: 275px;
+            background-image: url('https://images.toopa.com/1251680_807606731973_IMG_1374_2.JPG');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        header.main-header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 40, 70, 0.6);
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            margin: 0;
+            text-align: center;
+            width: 100%;
+            word-wrap: break-word;
+            z-index: 1;
+        }
+
+        section.description {
+            background: transparent;
+            color: #00334E;
+            padding: 1rem 2rem;
+            text-align: center;
+            line-height: 1;
+            font-family: Tahoma, serif;
+        }
+
+        section.description p {
+            max-width: 400px;
+            margin: 0 auto;
+            font-size: 1.4rem;
+        }
+
+        .filter-intro {
+            text-align: center;
+            color: #00334E;
+            font-family: Georgia, serif;
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            padding: 1rem;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0 1rem 2rem;
+        }
+
+        .category-box {
+            width: 200px;
+            aspect-ratio: .8 / 1;
+            border-radius: 8px;
+            overflow: hidden;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .category-box h2 {
+            position: relative;
+            margin: 0;
+            font-size: 1.5rem;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.2rem 1rem;
+            border-radius: 6px;
+            font-family: Tahoma, serif;
+        }
+
+        .category-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #00334E;
+            color: #C4DCEB;
+            padding: 2rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .footer-section {
+            flex: 1 1 200px;
+        }
+
+        .footer-section h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            font-family: Georgia, serif;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.95rem;
+            color: #C4DCEB;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1>Dublin's Art Group and Gallery</h1>
+    </header>
+
+    <section class="description">
+        <p>
+            Description goes here.
+        </p>
+    </section>
+
+    <div class="filter-intro">
+        <h2>Browse paintings by medium.</h2>
+    </div>
+
+    <div class="categories">
+        <a href="oils.html" class="category-box" style="background-image: url('https://iili.io/3GK5Gku.png')">
+            <h2>Oils</h2>
+        </a>
+        <a href="acrylics.html" class="category-box" style="background-image: url('https://iili.io/3GKgjRt.md.png')">
+            <h2>Acrylics</h2>
+        </a>
+        <a href="watercolours.html" class="category-box" style="background-image: url('https://iili.io/3G3SKWQ.png')">
+            <h2>Watercolours</h2>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>✉️ test@email.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Dublin's Art Group and Gallery showcases the finest local art across mediums. Based in the heart of Dublin.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <p><a href="#">About Us</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
